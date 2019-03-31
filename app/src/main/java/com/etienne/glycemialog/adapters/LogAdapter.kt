@@ -15,6 +15,7 @@ import com.etienne.glycemialog.dao.GlycemiaDAO
 import com.etienne.glycemialog.models.GlycemiaLog
 import com.etienne.glycemialog.utils.FRENCH_DATETIME_FORMAT
 import com.etienne.glycemialog.utils.getDPValue
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.item_log.view.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -54,7 +55,8 @@ class LogAdapter(var context: Context, var logs: ArrayList<GlycemiaLog>) : Recyc
     fun disableSelectionMode() {
         mCheckedPositions.clear()
         mSelectionModeEnabled = false
-        notifyDataSetChanged()
+
+        (context as MainActivity).rvLogs.post { notifyDataSetChanged() }
 
         (context as? MainActivity)?.setSelectionMode(false)
     }
