@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:foreground="?android:attr/selectableItemBackground"
+        style="@style/LogCard"
+        android:animateLayoutChanges="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:animateLayoutChanges="true">
+
+        <CheckBox
+                android:id="@+id/cbSelectLog"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvDateTimeLog"
+                android:layout_marginStart="10dp"
+                android:visibility="gone"/>
+
+        <TextView
+                android:id="@+id/tvDateTimeLog"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toEndOf="@id/cbSelectLog"
+                app:layout_constraintEnd_toStartOf="@id/tvGlycemiaLevel"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:drawableStart="@drawable/ic_event_white_24dp"
+                android:drawablePadding="10dp"
+                android:text="29/01/2019 16h27"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+        <TextView
+                android:id="@+id/tvGlycemiaLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tvUnitPerUnit"
+                app:layout_constraintStart_toEndOf="@id/tvDateTimeLog"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                android:text="1.56"
+                android:textColor="@color/colorAccent"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"/>
+
+        <TextView
+                android:id="@+id/tvUnitPerUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/tvGlycemiaLevel"
+                app:layout_constraintEnd_toEndOf="@id/tvGlycemiaLevel"
+                app:layout_constraintTop_toBottomOf="@id/tvGlycemiaLevel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                android:gravity="top"
+                android:text="g/L"
+                android:textColor="@color/white"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

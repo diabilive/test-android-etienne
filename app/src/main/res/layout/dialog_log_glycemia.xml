@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:orientation="vertical"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   android:background="@drawable/bg_gradient_purple"
+                                                   android:padding="@dimen/padding_dialog"
+                                                   android:animateLayoutChanges="true">
+    <TextView
+            android:id="@+id/tvTitleInputLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/etInputLog"
+            android:text="@string/title_input_your_glycemic_index"
+            app:layout_constraintVertical_chainStyle="spread_inside"
+            style="@style/ActivityTitle"/>
+
+    <EditText
+            android:id="@+id/etInputLog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleInputLog"
+            app:layout_constraintBottom_toTopOf="@id/tvErrorInputLog"
+            app:layout_constraintHorizontal_weight="0.5"
+            android:inputType="number|numberDecimal"
+            android:background="@null"
+            android:gravity="center"
+            android:maxLength="4"
+            android:padding="10dp"
+            android:hint="@string/hint_input_log"/>
+
+    <TextView
+            android:id="@+id/tvErrorInputLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/ErrorTextView"
+            android:visibility="gone"
+            android:text="@string/error_wrong_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etInputLog"
+            app:layout_constraintBottom_toTopOf="@id/llBottomControls"
+            app:layout_constraintHorizontal_weight="0.5"/>
+
+    <TextView
+            android:id="@+id/tvDateTimeInputLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:padding="@dimen/padding_text_view"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/tvErrorInputLog"
+            app:layout_constraintBottom_toTopOf="@id/llBottomControls"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:drawableEnd="@drawable/ic_access_time_white_24dp"
+            android:drawablePadding="10dp"/>
+
+    <LinearLayout
+            android:id="@+id/llBottomControls"
+            android:gravity="end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDateTimeInputLog"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="30dp">
+
+        <Button
+                android:id="@+id/btCancelInputLog"
+                android:text="@string/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                style="?android:attr/buttonBarButtonStyle"/>
+
+        <Button
+                android:id="@+id/btSaveInputLog"
+                android:text="@string/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                style="?android:attr/buttonBarButtonStyle"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

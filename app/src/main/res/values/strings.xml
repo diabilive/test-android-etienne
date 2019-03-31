@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GlycemiaLog</string>
+    <string name="title_glycemia_logs">Mes taux de glycémie</string>
+    <string name="title_input_your_glycemic_index">Entrez votre indice glycémique</string>
+    <string name="hint_input_log">X.xx g/L</string>
+    <string name="save">Enregistrer</string>
+    <string name="cancel">Annuler</string>
+    <string name="error_wrong_input">Saisie invalide</string>
+    <string name="text_delete">Supprimer</string>
+    <string name="item">élément</string>
+</resources>

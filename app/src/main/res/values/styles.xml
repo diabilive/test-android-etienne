@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ActivityTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/text_title_activity</item>
+        <item name="android:padding">@dimen/padding_text_title</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="LogCard" parent="Widget.MaterialComponents.CardView" >
+        <item name="cardBackgroundColor">@color/cardPurple</item>
+        <item name="cardCornerRadius">@dimen/default_app_radius</item>
+        <item name="android:layout_marginStart">@dimen/default_list_item_margin</item>
+        <item name="android:layout_marginEnd">@dimen/default_list_item_margin</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="ErrorTextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+</resources>
